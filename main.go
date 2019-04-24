@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	cards := newDeck()
@@ -26,4 +29,7 @@ func main() {
 	newCards.shuffle()
 	newCards.print()
 	fmt.Println("=============")
+
+	os.Remove("card_deck")
+	even_or_odd()
 }
